@@ -11,7 +11,7 @@ export default function LoginPage() {
         <div className="max-w-md text-center">
           <h1 className="text-4xl font-bold mb-6">Welcome to Our Student Club</h1>
           <p className="text-xl mb-8">
-            Join our community of enthusiastic learners and creators. We host a variety of events and activities to help you grow and connect with others.
+            Join our vibrant community of learners, innovators, and future leaders. We're dedicated to fostering growth, collaboration, and excellence.
           </p>
           <div className="text-3xl font-bold mb-2">
             Current Members
