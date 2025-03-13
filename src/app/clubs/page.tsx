@@ -200,7 +200,7 @@ export default function ClubsPage() {
         {/* Club Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {clubs.map((club) => (
-            <Card key={club.id} className="bg-white/5 border-white/10 overflow-hidden">
+            <Card key={club.id} className="bg-white/10 border-white/10 overflow-hidden">
               <div className={`h-2 bg-gradient-to-r ${club.color}`} />
               <CardHeader>
                 <div className="flex items-center justify-between">

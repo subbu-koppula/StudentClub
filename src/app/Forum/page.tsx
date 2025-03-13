@@ -153,7 +153,7 @@ export default function ForumPage() {
         </Card>
 
         {/* Forum Posts */}
-        <div className="space-y-6">
+        <div className="space-y-6 text-white">
           <h2 className="text-2xl font-bold">Recent Posts</h2>
 
           {posts.length === 0 ? (
@@ -164,7 +164,7 @@ export default function ForumPage() {
             posts.map((post) => (
               <Card key={post.id} className="bg-white/5 border-white/10">
                 <CardHeader>
-                  <CardTitle>{post.title}</CardTitle>
+                  <CardTitle className="text-white">{post.title}</CardTitle>
                   <div className="flex items-center text-sm text-gray-400 space-x-4">
                     <div className="flex items-center">
                       <User className="w-4 h-4 mr-1" />
@@ -177,7 +177,7 @@ export default function ForumPage() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="whitespace-pre-line">{post.description}</p>
+                  <p className="whitespace-pre-line text-white">{post.description}</p>
                 </CardContent>
               </Card>
             ))
