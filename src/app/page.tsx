@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { useState } from 'react';
-import LoginPage from './Login';
 import HomePage from './Home';
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
 
   return (
     <>
-      {/* {isLogin ? <HomePage /> : <LoginPage handleLogin = {handleLogin}/>} */}
       <HomePage />
     </>
   );
