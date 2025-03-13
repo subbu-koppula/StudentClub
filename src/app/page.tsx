@@ -15,7 +15,8 @@ export default function Home() {
 
   return (
     <>
-      {isLogin ? <HomePage /> : <LoginPage handleLogin = {handleLogin}/>}
+      {/* {isLogin ? <HomePage /> : <LoginPage handleLogin = {handleLogin}/>} */}
+      <HomePage />
     </>
   );
 }
