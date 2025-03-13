@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -10,10 +10,39 @@ import {
   ExternalLink,
   CheckSquare,
 } from "lucide-react";
+import { database } from "@/app/firebase/config";
+import { ref, onValue } from "firebase/database";
 
+
+ 
 import TodoList from "@/components/todo/Todo";
 
 export default function HomePage() {
+  const [userCount, setUserCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Reference to the users node in Firebase
+    const usersRef = ref(database, 'users');
+    
+    // Set up a listener to get the count of users
+    const unsubscribe = onValue(usersRef, (snapshot) => {
+      if (snapshot.exists()) {
+        // Count the number of user records
+        const count = Object.keys(snapshot.val()).length;
+        setUserCount(count);
+      } else {
+        // No users found
+        setUserCount(0);
+      }
+      setIsLoading(false);
+    }, (error) => {
+      console.error("Error fetching user count:", error);
+      setIsLoading(false);
+    });
+    
+    // Clean up listener on component unmount
+    return () => unsubscribe();
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white">
       {/* <Header user={user} handleSignOut={handleSignOut} /> */}
@@ -32,6 +61,13 @@ export default function HomePage() {
               <div className="text-sm font-medium text-gray-400">
                 Current Members
               </div>
+              {/* <div className="text-2xl font-bold">
+                {isLoading ? (
+                  <span className="text-gray-500">Loading...</span>
+                ) : (
+                  userCount
+                )}
+              </div> */}
               <div className="text-2xl font-bold ">122</div>
             </div>
           </div>
