@@ -65,6 +65,9 @@ const Header = () => {
               <Link href="/Forum" className="hover:text-gray-300 transition-colors">
                 Forum
               </Link>
+              <Link href="/chat" className="hover:text-gray-300 transition-colors">
+                Forum
+              </Link>
             </li>
             {/* Replace login link with sign out button if user is logged in */}
             {user ? (
