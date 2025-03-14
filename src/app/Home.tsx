@@ -61,14 +61,14 @@ export default function HomePage() {
               <div className="text-sm font-medium text-gray-400">
                 Current Members
               </div>
-              {/* <div className="text-2xl font-bold">
+              <div className="text-2xl font-bold">
                 {isLoading ? (
                   <span className="text-gray-500">Loading...</span>
                 ) : (
                   userCount
                 )}
-              </div> */}
-              <div className="text-2xl font-bold ">122</div>
+              </div>
+              {/* <div className="text-2xl font-bold ">122</div> */}
             </div>
           </div>
         </div>

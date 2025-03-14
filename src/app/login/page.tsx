@@ -44,14 +44,14 @@ export default function LoginPage() {
             excellence.
           </p>
           <div className="text-3xl font-bold mb-2">Current Members</div>
-          <div className="text-5xl font-extrabold">123</div>
-          {/* <div className="text-5xl font-extrabold">
+          {/* <div className="text-5xl font-extrabold">123</div> */}
+          <div className="text-5xl font-extrabold">
             {isLoading ? (
               <span className="text-gray-500">Loading...</span>
             ) : (
               userCount
             )}
-          </div> */}
+          </div>
           <p className="mt-4 text-sm">
             Be part of something extraordinary. Login or sign up to participate
             in our exciting events and activities!

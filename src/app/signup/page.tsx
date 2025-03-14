@@ -14,7 +14,7 @@ export default function SignupPage() {
             Become a member of a dynamic and supportive community. Explore opportunities, build skills, and make lasting connections.
           </p>
           <div className="text-3xl font-bold mb-2">Join the Family</div>
-          <div className="text-5xl font-extrabold">1,234 Members</div>
+          {/* <div className="text-5xl font-extrabold">1,234 Members</div> */}
           <p className="mt-4 text-sm">
             Don’t wait! Sign up today and unlock your potential with our club.
           </p>
